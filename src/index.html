@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dazzling Den</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="announcement">
+                <p>Save the BIG Joy for later through our Easy Gold Scheme <a href="#">Click for Join Scheme</a></p>
+            </div>
+            <div class="announcement">
+                <p>Get 20% off on your first purchase! <a href="#">Shop Now</a></p>
+            </div>
+            <div class="announcement">
+                <p>Free shipping on orders over ₹5000 <a href="#">Learn More</a></p>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="logo">
+                <img src="images/logo/LOGO JEWEL.png" alt="Dazzling Den Logo">
+            </div>
+            <div class="header-center">
+                <div class="contact-info">
+                    <a href="tel:+917397155193" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 7397155193</span>
+                    </a>
+                </div>
+                <form class="search-form">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="header-right">
+                <div class="header-icons">
+                    <a href="#" class="icon-link wishlist-icon">
+                        <i class="far fa-heart"></i>
+                        <span>Wishlist</span>
+                    </a>
+                    <div class="cart-dropdown">
+                        <a href="#" class="icon-link cart-icon" onclick="toggleCart(event)">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count">Cart (0)</span>
+                        </a>
+                    </div>
+                    <a href="login.html" class="account-link" title="Login">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Add this right after your header section -->
+    <div class="sliding-cart">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="closeCart()">×</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+    
+    <!-- Main content sections -->
+    <main>
+        <!-- Home section with featured products preview -->
+        <section id="home" class="section active">
+            <div class="slideshow-wrapper">
+                <div class="slideshow-container owl-carousel owl-theme">
+                    <!-- First Slide -->
+                    <div class="item">
+                        <img src="slides/1.png" alt="Luxury Jewelry">
+                        <div class="text-overlay">
+                            <h2>NECKLACE COLLECTION</h2>
+                            <p class="offer">Special 25% Off Today!</p>
+                            <p class="description">Discover our exclusive collection of fine jewelry</p>
+                            <p class="price">Starting at ₹49999 only</p>
+                            <button class="shop-now" onclick="showSection('products')">Shop Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Second Slide -->
+                    <div class="item">
+                        <img src="slides/2.jpg" alt="Diamond Collection">
+                        <div class="text-overlay">
+                            <h2>DIAMOND COLLECTION</h2>
+                            <p class="offer">Up to 30% Off on Diamond Jewelry</p>
+                            <p class="description">Exquisite diamonds for every occasion</p>
+                            <p class="price">Starting at ₹89999 only</p>
+                            <button class="shop-now" onclick="showSection('products')">View Collection</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Third Slide -->
+                    <div class="item">
+                        <img src="slides/3.jpg" alt="Wedding Collection">
+                        <div class="text-overlay">
+                            <h2>WEDDING COLLECTION</h2>
+                            <p class="offer">Exclusive Wedding Season Discount</p>
+                            <p class="description">Make your special day more memorable</p>
+                            <p class="price">Starting at ₹24999 only</p>
+                            <button class="shop-now" onclick="showSection('products')">Explore Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shop by Categories Section -->
+            <section class="categories-section">
+                <h2>Shop by Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <img src="images/Desktop_1_Earring_S1.webp" alt="Necklaces">
+                        <h3>Earrings</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/jos-alukkas-ring-20250117105033092756.webp" alt="Rings">
+                        <h3>Rings</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/Desktop_6_Necklace_S1.webp" alt="Earrings">
+                        <h3>Necklaces</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/Desktop_4 braclets.webp" alt="Bracelets">
+                        <h3>Bracelets</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/Desktop_3_Pandent_S2.webp" alt="Pendants">
+                        <h3>Pendants</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/Desktop_4_Bangle_S2.webp" alt="Gold Coins">
+                        <h3>Bangles</h3>
+                    </div>
+                </div>
+            </section>
+                <div class="tabs-container">
+                    <div class="tabs">
+                        <button class="tab-link active" onclick="openTab(event, 'new-arrivals')">
+                            <span>NEW ARRIVALS</span>
+                        </button>
+                        <button class="tab-link" onclick="openTab(event, 'featured')">
+                            <span>FEATURED</span>
+                        </button>
+                        <button class="tab-link" onclick="openTab(event, 'on-sale')">
+                            <span>ON SALE</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="new-arrivals" class="tab-content active">
+                    <div class="product-preview">
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/a1.avif" alt="Goddess Laxmi Silver Idol">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Goddess Laxmi Silver Idol</h4>
+                                <p class="price">₹45,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/a2.avif" alt="Gold Sindoor Box">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Gold Sindoor Box</h4>
+                                <p class="price">₹38,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/a3.avif" alt="Shell Diamond Locket">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Shell Diamond Locket</h4>
+                                <p class="price">₹52,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/a4.avif" alt="Silver Cattle Idol">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Silver Cattle Idol</h4>
+                                <p class="price">₹41,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="featured" class="tab-content">
+                    <div class="product-preview">
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/f 1.avif" alt="Featured 1">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Gem Necklace Set</h4>
+                                <p class="price">₹59,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/f2.avif" alt="Featured 2">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Petal Harmony Gold Nosepin</h4>
+                                <p class="price">₹69,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/f3.avif" alt="Featured 3">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Astral Harmony Gold Necklace</h4>
+                                <p class="price">₹79,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/f4.avif" alt="Featured 4">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Silver Lakshmi Elegance Lamp</h4>
+                                <p class="price">₹89,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="on-sale" class="tab-content">
+                    <div class="product-preview">
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/o1.avif" alt="Sale 1">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Lord Ganesh Silver Idol</h4>
+                                <p class="price"><del>₹99,999</del> ₹49,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/o2.avif" alt="Sale 2">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Glamorous Silver lamps</h4>
+                                <p class="price"><del>₹109,999</del> ₹59,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/o3.avif" alt="Sale 3">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Gold Sindoor Box</h4>
+                                <p class="price"><del>₹119,999</del> ₹69,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="category" 
+                             data-description="Detailed product description goes here."
+                             data-material="22K Gold">
+                            <div class="product-image">
+                                <img src="images/o4.avif" alt="Sale 4">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Classical Elegance Golden Jhumka</h4>
+                                <p class="price"><del>₹129,999</del> ₹79,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all" onclick="showAllProducts()">View All Products</button>
+
+                <!-- Quality-First Service Section -->
+                <section class="quality-service">
+                    <h2>QUALITY-FIRST SERVICE</h2>
+                    <p>We assure you that you will get what you can trust. Always!</p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h3>Free Shipping</h3>
+                            <p>Get 100% Free Shipping</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-exchange-alt"></i>
+                            <h3>Easy Exchange</h3>
+                            <p>Exchange your old designs anytime</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <h3>Certified Jewellery</h3>
+                            <p>100% Certified Jewellery</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Lifetime Product Service</h3>
+                            <p>Keep your jewellery in top shape</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo-alt"></i>
+                            <h3>14 Days Return</h3>
+                            <p>14 Days Hassle-Free Returns</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        
+        <!-- Remove the existing products section and keep only this one -->
+        <section id="all-products" class="section">
+            <h2>Our Collections</h2>
+            
+            <!-- Category Navigation -->
+            <div class="category-nav">
+                <button class="category-btn active" data-category="all">All Collections</button>
+                <button class="category-btn" data-category="earrings">Earrings</button>
+                <button class="category-btn" data-category="necklaces">Necklaces</button>
+                <button class="category-btn" data-category="bangles">Bangles</button>
+                <button class="category-btn" data-category="rings">Rings</button>
+                <button class="category-btn" data-category="bracelets">Bracelets</button>
+                <button class="category-btn" data-category="pendants">Pendants</button>
+            </div>
+        
+            <div class="products-container">
+                <!-- Gold Coins -->
+                <div class="product-category" id="gold-coins">
+                    <h3>Gold Coins</h3>
+                    <div class="product-grid">
+                        <div class="product" data-product-id="gold-coin-1">
+                            <div class="product-image">
+                                <img src="images/6.jpg" alt="24K Gold Coin">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>24K ayyappan Pure Gold Coin</h4>
+                                <p class="weight">8g</p>
+                                <p class="price">₹48,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="gold-coins">
+                            <div class="product-image">
+                                <img src="images/5.jpg" alt="22K Gold Coin">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>22K Ganapathy Gold Coin</h4>
+                                <p class="weight">10g</p>
+                                <p class="price">₹55,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="gold-coins">
+                            <div class="product-image">
+                                <img src="images/4.jpg" alt="24K Lakshmi Gold Coin">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>24K Sriranganadhar Gold Coin</h4>
+                                <p class="weight">5g</p>
+                                <p class="price">₹32,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="gold-coins">
+                            <div class="product-image">
+                                <img src="images/24K Gold Bar.webp" alt="24K Gold Bar">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>24K Lakshmi Gold Coin</h4>
+                                <p class="weight">10g</p>
+                                <p class="price">₹62,999</p>
+                                <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Necklaces -->
+                <div class="product-category" id="necklaces">
+                    <h3>Necklaces</h3>
+                    <div class="product-grid">
+                        <div class="product" data-category="necklaces">
+                            <div class="product-image">
+                                <img src="images/Diamond Necklace.jpg" alt="Diamond Necklace">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Diamond Necklace Set</h4>
+                                <p class="price">₹1,25,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="necklaces">
+                            <div class="product-image">
+                                <img src="images/13.jpg" alt="Gold Necklace">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Traditional Gold Necklace</h4>
+                                <p class="price">₹85,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="necklaces">
+                            <div class="product-image">
+                                <img src="images/Pearl Necklace Set.jpg" alt="Pearl Necklace">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Pearl Necklace Set</h4>
+                                <p class="price">₹65,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="necklaces">
+                            <div class="product-image">
+                                <img src="images/Emerald Necklace Set.webp" alt="Emerald Necklace">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Emerald Necklace Set</h4>
+                                <p class="price">₹1,45,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Bangles -->
+                <div class="product-category" id="bangles">
+                    <h3>Bangles</h3>
+                    <div class="product-grid">
+                        <div class="product" data-category="bangles">
+                            <div class="product-image">
+                                <img src="images/Traditional Gold Bangle.avif" alt="Gold Bangle">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Traditional Gold Bangle</h4>
+                                <p class="price">₹75,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="bangles">
+                            <div class="product-image">
+                                <img src="images/Diamond Studded Bangle.avif" alt="Diamond Bangle">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Diamond Studded Bangle</h4>
+                                <p class="price">₹95,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="bangles">
+                            <div class="product-image">
+                                <img src="images/Antique Gold Bangle.jpg" alt="Antique Bangle">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Antique Gold Bangle</h4>
+                                <p class="price">₹65,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="bangles">
+                            <div class="product-image">
+                                <img src="images/Platinum Bangle.webp" alt="Platinum Bangle">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Platinum Bangle</h4>
+                                <p class="price">₹1,05,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Rings -->
+                <div class="product-category" id="rings">
+                    <h3>Rings</h3>
+                    <div class="product-grid">
+                        <div class="product" data-category="rings">
+                            <div class="product-image">
+                                <img src="images/Solitaire Diamond Ring.jpg" alt="Diamond Ring">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Solitaire Diamond Ring</h4>
+                                <p class="price">₹1,15,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="rings">
+                            <div class="product-image">
+                                <img src="images/Traditional Gold Ring.jpg" alt="Gold Ring">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Traditional Gold Ring</h4>
+                                <p class="price">₹45,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="rings">
+                            <div class="product-image">
+                                <img src="images/Couple Ring Set.jpg" alt="Couple Ring">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Couple Ring Set</h4>
+                                <p class="price">₹85,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="rings">
+                            <div class="product-image">
+                                <img src="images/Sapphire Ring.webp" alt="Sapphire Ring">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Sapphire Ring</h4>
+                                <p class="price">₹1,35,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Bracelets -->
+                <div class="product-category" id="bracelets">
+                    <h3>Bracelets</h3>
+                    <div class="product-grid">
+                        <div class="product" data-category="bracelets">
+                            <div class="product-image">
+                                <img src="images/Designer Gold Bracelet.avif" alt="Gold Bracelet">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Designer Gold Bracelet</h4>
+                                <p class="price">₹85,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="bracelets">
+                            <div class="product-image">
+                                <img src="images/Diamond Tennis Bracelet.jpg" alt="Diamond Bracelet">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Diamond Tennis Bracelet</h4>
+                                <p class="price">₹95,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="bracelets">
+                            <div class="product-image">
+                                <img src="images/Rose Gold Chain Bracelet.jpg" alt="Rose Gold Bracelet">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Rose Gold Chain Bracelet</h4>
+                                <p class="price">₹45,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="bracelets">
+                            <div class="product-image">
+                                <img src="images/Silver Bracelet.webp" alt="Silver Bracelet">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Silver Bracelet</h4>
+                                <p class="price">₹55,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pendants -->
+                <div class="product-category" id="pendants">
+                    <h3>Pendants</h3>
+                    <div class="product-grid">
+                        <div class="product" data-category="pendants">
+                            <div class="product-image">
+                                <img src="images/Solitaire Diamond Pendant.jpg" alt="Diamond Pendant">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Solitaire Diamond Pendant</h4>
+                                <p class="price">₹55,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="pendants">
+                            <div class="product-image">
+                                <img src="images/Traditional Gold Pendant.jpg" alt="Gold Pendant">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Traditional Gold Pendant</h4>
+                                <p class="price">₹35,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="pendants">
+                            <div class="product-image">
+                                <img src="images/Pearl and Diamond Pendant.jpg" alt="Pearl Pendant">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Pearl and Diamond Pendant</h4>
+                                <p class="price">₹42,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product" data-category="pendants">
+                            <div class="product-image">
+                                <img src="images/Ruby Pendant.webp" alt="Ruby Pendant">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Ruby Pendant</h4>
+                                <p class="price">₹65,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earrings -->
+                <div class="product-category" id="earrings">
+                    <h3>Earrings</h3>
+                    <div class="product-grid">
+                        <div class="product" data-category="earrings">
+                            <div class="product-image">
+                                <img src="images/Diamond Stud Earrings.webp" alt="Diamond Earrings">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Diamond Stud Earrings</h4>
+                                <p class="weight">8g</p>
+                                <p class="price">₹48,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="earrings">
+                            <div class="product-image">
+                                <img src="images/Gold Hoop Earrings.webp" alt="Hoop Earrings">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Gold Hoop Earrings</h4>
+                                <p class="weight">10g</p>
+                                <p class="price">₹55,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="earrings">
+                            <div class="product-image">
+                                <img src="images/Traditional Jhumka Earrings.webp" alt="Jhumka Earrings">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Traditional Jhumka Earrings</h4>
+                                <p class="weight">5g</p>
+                                <p class="price">₹32,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="product" data-category="earrings">
+                            <div class="product-image">
+                                <img src="images/Pearl Stud Earrings.webp" alt="Stud Earrings">
+                                <div class="product-overlay">
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Pearl Stud Earrings</h4>
+                                <p class="weight">10g</p>
+                                <p class="price">₹62,999</p>
+                                <div class="product-actions">
+                                    <button class="add-to-cart-text-btn" onclick="addToCartAndCheckout(this)">Add to Cart</button>
+                                    <div class="wishlist-icon-dummy" title="Wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="wishlist" class="section">
+            <h2>My Wishlist</h2>
+            <div id="wishlist-items">
+                <!-- Wishlist items will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="cart" class="section">
+            <h2>My Cart</h2>
+            <button class="close-cart-btn" onclick="closeCart()" aria-label="Close Cart">×</button>
+            
+            <!-- Add order summary section -->
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="summary-details">
+                    <div class="subtotal">
+                        <span>Subtotal:</span>
+                        <span id="subtotal-amount">₹0</span>
+                    </div>
+                    <div class="shipping">
+                        <span>Shipping:</span>
+                        <span id="shipping-amount">₹0</span>
+                    </div>
+                    <div class="total">
+                        <strong>Total:</strong>
+                        <strong id="cart-total-amount">₹0</strong>
+                    </div>
+                </div>
+            </div>
+
+            <form id="checkoutForm" class="checkout-form" onsubmit="sendToWhatsapp(event)">
+                <div class="form-group">
+                    <label for="checkout-name">Full Name *</label>
+                    <input type="text" id="checkout-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-phone">Phone Number *</label>
+                    <input type="tel" id="checkout-phone" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-address">Shipping Address *</label>
+                    <textarea id="checkout-address" required></textarea>
+                </div>
+                <button type="submit" class="checkout-btn">Place Order</button>
+            </form>
+        </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Dazzling Den</h3>
+                <p>Address: Dazzling Den Palace, Madurai, Tamilnadu</p>
+                <p>Phone: (+91) 7397155193</p>
+                <p>Email: dazzlingdenjewlers@gmail.com</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://pinterest.com" target="_blank" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>My Account</h3>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Checkout</a></li>
+                    <li><a href="#">Frequently Questions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Top Rated Products</h3>
+                <div class="top-rated-product">
+                    <img src="images/braclets.png" alt="Bracelet">
+                    <p>Bracelet</p>
+                    <p><span class="old-price">Rs. 450612.54</span> <span class="new-price">Rs. 400612.54</span></p>
+                </div>
+                <div class="top-rated-product">
+                    <img src="images/ring.webp" alt="Ring">
+                    <p>Ring</p>
+                    <p><span class="old-price">Rs. 750612.54</span> <span class="new-price">Rs. 700612.54</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dazzling Den. All rights reserved.</p>
+            <div class="footer-payment">
+                <img src="images/payment/visa.jpg" alt="Visa">
+                <img src="images/payment/master card.png" alt="MasterCard">
+                <img src="images/payment/paypal.png" alt="PayPal">
+                <img src="images/payment/skrill.png" alt="Skrill">
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/917397155193" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <button class="back-btn" aria-label="Go back"></button>
+            <button class="close-modal-btn" onclick="closeProductModal()" aria-label="Close">×</button>
+            <div class="product-detail">
+                <div class="product-detail-left">
+                    <img id="modal-product-image" src="" alt="Product Image">
+                </div>
+                <div class="product-detail-right">
+                    <h2 id="modal-product-name"></h2>
+                    <div class="product-pricing">
+                        <p class="old-price" id="modal-old-price"></p>
+                        <p class="new-price" id="modal-new-price"></p>
+                    </div>
+                    <div class="product-description" id="modal-description">
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" onclick="decreaseQuantity()">-</button>
+                        <input type="number" value="1" min="1" max="10" id="quantity" onchange="validateQuantity(this)">
+                        <button class="quantity-btn plus" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCartAndShowSummary()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-popup">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-cart" onclick="closeCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">₹0</span>
+                </div>
+                <div class="cart-buttons">
+                    <button class="view-cart-btn" onclick="viewCart()">View Cart</button>
+                    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
